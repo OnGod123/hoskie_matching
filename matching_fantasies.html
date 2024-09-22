@@ -1,0 +1,10 @@
+<h2>Matching Users with Similar Sexual Fantasies</h2>
+{% if matching_users %}
+    <ul>
+        {% for user in matching_users %}
+            <li>{{ user.user.username }} - {{ user.sex_orientation }}</li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No matching users found.</p>
+{% endif %}

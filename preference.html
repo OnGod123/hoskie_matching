@@ -1,0 +1,11 @@
+<form method="POST">
+    {% csrf_token %}
+    
+    <h2>Sexual Fantasies</h2>
+    {{ sexual_fantasies_form.as_p }}
+    <button type="submit" name="submit_sexual_fantasies">Submit Sexual Fantasies</button>
+    
+    <h2>Physical Appearance Preferences</h2>
+    {{ physical_appearance_form.as_p }}
+    <button type="submit" name="submit_physical_appearance">Submit Physical Appearance</button>
+</form>

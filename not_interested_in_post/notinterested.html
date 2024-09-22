@@ -1,0 +1,17 @@
+<ul id="user-lists">
+    <li data-list-id="1">List 1 <button class="delete-list">Delete</button></li>
+    <li data-list-id="2">List 2 <button class="delete-list">Delete</button></li>
+    <li data-list-id="3">List 3 <button class="delete-list">Delete</button></li>
+</ul>
+$(document).ready(function() {
+    // Event listener for the delete button
+    $('.delete-list').on('click', function() {
+        var listItem = $(this).closest('li');  // Get the closest <li> element
+
+        // Confirm before deleting
+        if (confirm('Are you sure you want to remove this list from your view?')) {
+            // Simply remove the list item from the DOM
+            listItem.remove();
+        }
+    });
+});
